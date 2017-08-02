@@ -16,8 +16,8 @@ RUN apt-get install apt-transport-https lsb-release && \
 
 VOLUME ["/root/.config"]
 
-# Add flake8
-RUN pip install -U flake8
+# Add flake8 and plugins
+RUN pip install -U flake8 flake8-docstrings flake8-print
 '
 
 source ../shared/images/generate.sh
